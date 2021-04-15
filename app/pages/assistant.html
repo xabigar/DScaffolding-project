@@ -1,0 +1,229 @@
+<style>
+#assistantOverlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity:0.0;
+  z-index: 1999;
+}
+#assistant{
+  top: 50%;
+  left: 40%;
+  position: absolute;
+  z-index:2000;
+}
+#assistantContainer{
+  position: relative;
+  width: 700px;
+  margin-left: -350px;
+  height: 400px;
+  margin-top: -200px;
+  background-color:#fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+#assistantIndex{
+  float:left;
+  width:25%;
+}
+#assistantIndexCont{
+  vertical-align:middle;
+  margin-top:70px;
+  margin-left:10px;
+}
+#assistantBody{
+  float:left;
+  width:74%;
+  margin-top:40px;
+  overflow-y:auto;
+  height:325px;
+  padding-right:10px;
+  padding-left:10px;
+  /*padding:0px 10px 10px 10px;*/
+}
+.assistantIndexElement{
+  margin-top:10px;
+  cursor:pointer;
+  opacity:0.7;
+  color:rgb(0, 170, 255);
+}
+.assistantIndexElement:hover{
+  opacity:1;
+}
+.assistantIndexElement.level2{
+  margin-left:10px;
+}
+.assistantIndexElement.selected{
+  opacity:1;
+  color:rgb(61, 71, 77);
+}
+.assistantIndexElement.selected:hover{
+  cursor:default;
+}
+.assistantBodyCont{
+  /*padding:30px 10px 10px 10px;*/
+  display:none;
+}
+.assistantBodyCont.selected{
+  display:block;
+}
+#assistantCloseButton{
+  position:absolute;
+  top:5px;
+  right:5px;
+}
+#assistantCloseButton img{
+  width:16px;
+  opacity:0.2;
+}
+#assistantCloseButton img:hover{
+  opacity:0.7;
+  cursor:pointer;
+}
+#assistantNextButton{
+  position:absolute;
+  bottom:10px;
+  right:5px;
+}
+#assistantNextButton img{
+  opacity:0.5;
+  width:32px;
+}
+#assistantNextButton img:hover{
+  cursor:pointer;
+  opacity:1;
+}
+#assistantPreviousButton{
+  position:absolute;
+  bottom:10px;
+  left:5px;
+  display:none;
+}
+#assistantPreviousButton img{
+  opacity:0.5;
+  width:32px;
+  transform: rotate(180deg);
+}
+#assistantPreviousButton img:hover{
+  cursor:pointer;
+  opacity:1;
+}
+.assistantBodyCont img{
+  width:90%;
+  margin-left:5%;
+}
+.glossaryTerm{
+  font-weight:bold;
+}
+#literatureList li{
+  margin-top:5px;
+}
+#assistantGlossary li{
+  margin-top:5px;
+}
+</style>
+
+<div id="assistantOverlay"></div>
+<div id="assistant">
+  <div id="assistantContainer">
+    <div id="assistantIndex">
+      <div id="assistantIndexCont">
+        <div id="assistantIndexDSR" class="assistantIndexElement selected">
+          1. Design Science Research
+        </div>
+        <div id="assistantIndexProblems" class="assistantIndexElement">
+          2. Problems
+        </div>
+        <div id="assistantIndexPA" class="assistantIndexElement">
+          3. Problem Analysis
+        </div>
+        <div id="assistantIndexDefinePrecisely" class="assistantIndexElement level2">
+          3.1. Define Precisely
+        </div>
+         <div id="assistantIndexPositionJustify" class="assistantIndexElement level2">
+          3.2. Position and Justify
+        </div>
+         <div id="assistantIndexRCA" class="assistantIndexElement level2">
+          3.3. Find Root Causes
+        </div>
+         <div id="assistantIndexNextSteps" class="assistantIndexElement">
+          4. Next steps
+        </div>
+        <div id="assistantIndexLiterature" class="assistantIndexElement">
+          5. Literature
+        </div>
+        <div id="assistantIndexGlossary" class="assistantIndexElement">
+          6. Glossary
+        </div>
+      </div>
+    </div>   
+    <div id="assistantBody">
+      <div id="assistantBodyDSR" class="assistantBodyCont selected">
+        Design Science Research (DSR) is a research methodology that revolves around the solution of practical problems through the creation of purposeful artefacts. The final goal is to generalize the solution to these practical and situated problems in order to be able to solve similar ones. Thus, an initial exhaustive analysis of the problem becomes crutial. That is why DSR projects tend to start with the Problem Analysis, in which problems and their surrounding contexts are analyzed.
+        <br/>
+        <img width="200"/>
+        <br/>
+        Extracted from <span class="assistantReference">An introduction to Design Science</span>
+        <br/>
+        But, first of all, what is meant by a problem?
+      </div>
+      <div id="assistantBodyProblem" class="assistantBodyCont">
+        A problem is defined as the difference between the current state and a desired state.
+      </div>
+      <div id="assistantBodyProblemAnalysis" class="assistantBodyCont">
+        As said previously, the Problem Analysis is the first phase of a DSR project. The success of the project relies largely on a deep understanding of the problem to be addressed. This phase can be seen as a process in which a vague statement of a problem is transformed into a matured analysis, in which both the problem and its context are described.
+        <br/>
+        <img/>
+        <br/>
+        The problem analysis comprises three different activities: define precisely, position and justify and find root causes. Next subsections explain each of them in detail.
+      </div>
+      <div id="assistantBodyDefinition" class="assistantBodyCont">
+        A Problem Analysis starts by a precise definition of the problem. A precise definition helps to limit the scope of the project, hence increasing the chances of coming up with a right solution. This definition must also be as clear as possible, as it has to be understood by different people. Different stakeholder types can be engaged in the formulation of the problem in order to integrate their points of view and knowledge into a more complete definition.
+        <br/>
+        The problem is defined in the highlighted branch of the mind map.
+      </div>
+      <div id="assistantBodyPosition" class="assistantBodyCont">
+        Problems do not exist in an isolated way but in a context, and it has to be well understood in order to address the problem effectively. Therefore, the practice in which it appears needs to be described by analizing the stakeholders, activities, environment, purpose and tooling. Additionaly, the significance of the problem within the practice has to be justified in order for people to agree that it worths solving.
+        <br/>
+        The highlighted branch of the mind map is the place for positioning and justifying the problem.
+      </div>
+      <div id="assistantBodyRCA" class="assistantBodyCont">
+        When anaysing a problem, not only is it necessary to understand the context in which it takes place, but also it is important to find which are the causes that are beneath it. In this sense, the Root Cause Analysis is a technique for uncovering those underlying causes also known as root cuases. These causes are the ones to be tackled if we want to effectively address the problem.
+        <br/>
+        There are different approaches for representing causal models. We resort to an adaptation of Venable’s CCM4DSR approach, which differentiates the problem space from the solution space. The former focuses on the problem, stating what is undesirable about it and what its causes are while the latter focuses on its solution, specifying what benefits would accrue from solving the problem, what causes of the problem might be reduced or eliminated to solve the problem, and how such problem causes might be reduced or eliminated. The solution space can be derived by reversing the statements made in the problem space. For that purpose, statements in the problem space include both the undesirable and the desirable effects of an element, normaly separated by an ellipsis (…); for example: “High … low mental effort”. This way, the solution space counterpart can be derived: “Low … high mental effort”.
+        <br/>
+        The highlighted part of the mind map will help you to perform a root cause analysis.
+      </div>
+      <div id="assistantBodyNextSteps" class="assistantBodyCont">
+        Once having understood the problem, it is time to start thinking about solving it. All the knowledge acquired during the problem analysis serves as a basis for effectively solving it, and the root cuases identified can be transformed as a requirements for the purposeful artefact and then used to evaluate it.
+      </div>
+      <div id="assistantBodyLiterature" class="assistantBodyCont">
+        <ul id="literatureList">
+          <li>Johannesson, Paul, and Erik Perjons. An introduction to design science. Springer, 2014.</li>
+          <li>Hevner, Alan R. "A three cycle view of design science research." Scandinavian journal of information systems 19.2 (2007): 4.</li>
+          <li>Venable, John R. "Using Coloured Cognitive Mapping (CCM) for design science research." International Conference on Design Science Research in Information Systems. Springer, Cham, 2014.</li>
+          <li>Andersen, Bjørn, and Tom Fagerhaug. Root cause analysis: simplified tools and techniques. ASQ Quality Press, 2006.</li>
+        </ul>
+      </div>
+      <div id="assistantBodyGlossary" class="assistantBodyCont">
+        <ul id="assistantGlossary">
+         <li><span class="glossaryTerm">Artefact</span>: an object made by humans with the intention that it be used to address a practical problem. In a DSR setting, artefacts can range from models, design guidelines or prototypes to algorithms or complete systems.</li>
+         <li><span class="glossaryTerm">Practice</span>: set of human activities performed regularly and seen as meaningfully related to each other by the people participating in them.</li>
+        </ul>
+      </div>
+    </div>
+    <div id="assistantCloseButton">
+      <img/>      
+    </div>
+    <div id="assistantNextButton">
+      <img/>
+    </div>
+    <div id="assistantPreviousButton">
+      <img/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<style>
+#feedbackOverlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity:0.2;
+  background-color: #fff;
+  z-index: 1999;
+}
+#feedback{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index:2000;
+}
+#feedbackContainer{
+  position: relative;
+  width: 700px;
+  margin-left: -350px;
+  height: 600px;
+  margin-top: -300px;
+  background-color:#fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+#feedbackCloseButton{
+  position:absolute;
+  top:5px;
+  right:5px;
+}
+#feedbackCloseButton img{
+  width:16px;
+  opacity:0.2;
+}
+#feedbackCloseButton img:hover{
+  opacity:0.7;
+  cursor:pointer;
+}
+</style>
+
+<div id="feedbackOverlay"></div>
+<div id="feedback">
+  <div id="feedbackContainer">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2xoIEDZ1R-RvA7AfCL53I9OE6d8luN7bEOHaldv7xETn8Ow/viewform?embedded=true" width="700" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <div id="feedbackCloseButton">
+      <img/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  </script>
+  <title>DScaffolding options</title>
+  <link rel="stylesheet" type="text/css" href="../styles/options.css">
+  <link rel="stylesheet" type="text/css" href="../styles/bootstrap.min.css">
+</head>
+<body>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-2">
+        <img class="logo" src="../images/icon128.png">
+      </div>
+      <div class="col-sm-6 col-md-10">
+        <h2 class="title">DScaffolding configuration</h2>
+      </div>
+    </div>
+    <br/>
+    <h3>Authorization request</h3>
+    Tick off to grant access to your account in the following platforms:
+    <br/><br/>
+    <div class="row">
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail externalService disabled" id="mindmeisterEnable">
+          <img src="../images/mindmeister.png">
+          <div class="caption">
+            <input type="checkbox" id="mindmeisterEnableCheckbox"/><span class="serviceName">Mindmeister</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail externalService disabled" id="hypothesisEnable">
+          <img src="../images/hypothesis.png">
+          <div class="caption">
+            <input type="checkbox" id="hypothesisEnableCheckbox"/><span class="serviceName">Hypothes.is</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail externalService disabled" id="mendeleyEnable">
+          <img src="../images/mendeley2.png">
+          <div class="caption">
+            <input type="checkbox" id="mendeleyEnableCheckbox"/><span class="serviceName">Mendeley</span>
+            <div id="mendeleyProjectMatching">
+              Annotations by:
+              <select id="rootNode">
+                <option value="folder">Folder</option>
+                <option value="tag">Tag</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail externalService disabled" id="githubEnable">
+          <img src="../images/github.png">
+          <div class="caption">
+            <input type="checkbox" id="githubEnableCheckbox"/><span class="serviceName">Github</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <div class="thumbnail externalService disabled" id="googleFormsEnable">
+          <img src="../images/googleforms.png">
+          <div class="caption">
+            <input type="checkbox" id="googleFormsEnableCheckbox"/><span class="serviceName">Google Forms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-8">
+        <div id="authorizationSuccess" class="alert alert-success" role="alert"></div>
+        <div id="authorizationError" class="alert alert-danger" role="alert"></div>
+      </div>
+    </div>
+
+    <h3>Quality thresholds</h3>
+    Thresholds are set in terms of width and depth of descendant trees for the activities:<br/><br/>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-5">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#describePractice">
+                  Describe Practice</a>
+              </h4>
+            </div>
+            <div id="describePractice" class="panel-collapse collapse">
+              <div class="panel-body">
+                <label class="completenessOption">References:</label><b>0</b><input class="references" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                <label class="completenessOption">Descendants:</label><b>0</b><input class="descendants" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                <label class="completenessOption">Children:</label><b>0</b><input class="children" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#ascertainCauses">
+                  Ascertain Causes</a>
+              </h4>
+            </div>
+            <div id="ascertainCauses" class="panel-collapse collapse">
+              <div class="panel-body">
+                <label class="completenessOption">References:</label><b>0</b><input class="references" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                <label class="completenessOption">Descendants:</label><b>0</b><input class="descendants" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                <label class="completenessOption">Children:</label><b>0</b><input class="children" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#ascertainConsequences">
+                  Ascertain Consequences</a>
+              </h4>
+            </div>
+            <div id="ascertainConsequences" class="panel-collapse collapse">
+              <div class="panel-body">
+                <label class="completenessOption">References:</label><b>0</b><input class="references" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                <label class="completenessOption">Descendants:</label><b>0</b><input class="descendants" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                <label class="completenessOption">Children:</label><b>0</b><input class="children" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+              </div>
+            </div>
+          </div>
+          <!--<div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#supportingEvidencesCauses">
+                            Supporting Evidences for Causes</a>
+                          </h4>
+                        </div>
+                        <div id="supportingEvidencesCauses" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <label class="completenessOption">References:</label><b>0</b><input class="references" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                            <label class="completenessOption">Descendants:</label><b>0</b><input class="descendants" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                            <label class="completenessOption">Children:</label><b>0</b><input class="children" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#supportingEvidencesConsequences">
+                            Supporting Evidences for Consequences</a>
+                          </h4>
+                        </div>
+                        <div id="supportingEvidencesConsequences" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <label class="completenessOption">References:</label><b>0</b><input class="references" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                            <label class="completenessOption">Descendants:</label><b>0</b><input class="descendants" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                            <label class="completenessOption">Children:</label><b>0</b><input class="children" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"/><b>20</b>
+                          </div>
+                        </div>
+                      </div>-->
+        </div>
+      </div>
+    </div>
+
+    <h3>Experimental features</h3>
+    <div class="row">
+      <div class="col-sm-12 col-md-5">
+        <div class="panel-group" id="experimental-features">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <input type="checkbox" id="mendeley-folder-management-checker"/> Mendeley folder management
+              </h4>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <input type="checkbox" id="comment-notification-checker"/> Comment notification
+              </h4>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <input type="checkbox" id="assistant-checker"/> Assistant
+              </h4>
+            </div>
+          </div>
+          <!--<div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <input type="checkbox" id="article-suggestion-checker"/> Article suggestion
+                                </h4>
+                            </div>
+                        </div>-->
+          <!--<div class="panel panel-default">
+                           <div class="panel-heading">
+                               <h4 class="panel-title">
+                                   <a data-toggle="collapse" data-parent="#experimental-features" href="#article-suggestion-options"/>
+                                       <input type="checkbox" id="article-suggestion-checker"/> Article suggestion
+                                   </a>
+                                 </h4>
+                           </div>
+                           <div class="panel-collapse collapse" id="article-suggestion-options">
+                               <div class="panel-body">
+                                   <div class="suggestionOption"><input type="checkbox" id="related-suggestions-checker" checked="checked"/> <label>Articles related to your references</label></div>
+                                   <div class="suggestionOption"><input type="checkbox" id="cite-suggestions-checker" checked="checked"/> <label>Articles citing your references</label></div>
+                                   <div class="suggestionOption"><input type="checkbox" id="term-suggestions-checker" checked="checked"/> <label>Articles related to your root cause analysis</label></div>
+                                   <div class="suggestionOption"><label>Number of suggestions:</label>
+                                       <select id="suggestionCount">
+                                           <option value="1">1</option>
+                                           <option value="2">2</option>
+                                           <option value="3" selected="selected">3</option>
+                                           <option value="4">4</option>
+                                           <option value="5">5</option>
+                                       </select>
+                                   </div>
+                                   <div class="suggestionOption"><label>Frequency of suggestions:</label>
+                                       <select id="suggestionFrequency">
+                                           <option value="0">Each time you open the mindmap</option>
+                                           <option value="1">Daily</option>
+                                           <option value="7" selected="selected">Weekly</option>
+                                       </select>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>-->
+        </div>
+      </div>
+    </div>
+
+    <!--<h3>Privacy Policy</h3>
+    DScaffolding makes use of Google Analytics to gather usage statistics that will be used for both research purposes and for continuing improving the tool. All the data collected is anonymized, and it will be stored by Google Analytics for up to 26 months.-->
+</div>
+</div>
+</script>
+<script src="../scripts/options.js">
+</script>
+</body>
+</html>

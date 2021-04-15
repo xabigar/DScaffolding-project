@@ -1,0 +1,147 @@
+<script src="../scripts/popup.js"></script>
+<style>
+	body{
+	  background-color:#eee;
+	  max-height:600px;
+	}
+	#container{
+	  background-color:#eee;
+	  width:450px;
+	  padding-top:10px;
+	  padding-left:10px;
+	  /*max-height:40px;*/
+	  overflow-y:scroll;
+	  margin-top:-8px;
+	  margin-left:-10px;
+	  margin-right:-23px;
+	}
+	#commentList{
+	  width:95%;
+	  margin-top:20px;
+	}
+	.comment{
+	  width:100%;
+	  margin-top:10px;
+	  min-height:30px;
+	  padding-bottom:10px;
+	}
+	.checkbox{
+	  float:left;
+	  margin-right:10px;
+	}
+	.commentBody{
+	  float:left;
+	  width:90%;
+	}
+	.firstRow{
+		/*width:90%;*/
+	}
+	.author{
+	  float:left;
+	  margin-right:3px;
+	}
+	.dateCont{
+	  float:left;
+	}
+	.textCont{
+	  margin-top:25px;
+	  font-style:italic;
+	}
+	.context{
+	  margin-top:5px;
+	}
+	#configurationLink{
+	  padding-top:10px;
+	  padding-left:5px;
+	  padding-bottom:10px;
+	  clear:both;
+	}
+	.separator{
+	  clear:both;
+	  color:#eee;
+	  opacity:0.2;
+	  margin-top:15px;
+	}
+	#configurationLink a{
+	  text-decoration:none;
+	  cursor:pointer;
+	  color:#1a58bc;
+	}
+	#configurationLink a:hover{
+	  color:#8babe0;
+	}
+	.replyButton{
+		float:right;
+		width:13px;
+		opacity:0.7;
+		position:relative;
+		cursor:pointer;
+		/*margin-right:10px;*/
+	}
+	.replyButton.active{
+		opacity:0.2;
+	}
+	#markAsRead{
+		margin-left:10px;
+	}
+	.node{
+	  text-decoration:none;
+	  cursor:pointer;
+	  color:#1a58bc;
+	}
+	.node:hover{
+		color:#8babe0;
+	}
+	.mindmap{
+	  text-decoration:none;
+	  cursor:pointer;
+	  color:#1a58bc;
+	}
+	.mindmap:hover{
+		color:#8babe0;
+	}
+	.replyTextarea{
+		margin-top:5px;
+		width:80%;
+		height:60px;
+		resize:none;
+	}
+	.sendReplyButton{
+		margin-right: 15px;
+		margin-top: 25px;
+		float:right;
+	}
+	.replyCont{
+		display:none;
+		margin-bottom:5px;
+	}
+</style>
+<template id="commentTemplate">
+  <div id="templateCont">
+	  <div class="comment">
+	    <input type="checkbox" class="checkbox"/>
+	    <div class="commentBody">
+	      <div class="author"></div>
+	      <div class="dateCont">(<span class="date"></span>)</div>
+	      <img class="replyButton" src="../images/reply.png" title="Reply">
+	      <div class="textCont">
+	        "<span class="text"></span>"
+	      </div>
+	      <div class="context">
+	        In <a class="node" target="_blank"></a> of <a class="mindmap" target="_blank"></a>
+	      </div>
+	      <div class="replyCont"><textarea class="replyTextarea"></textarea><button class="sendReplyButton">Send</button></div>
+	    </div>
+	  </div>
+	  <br/><hr class="separator"/>
+  </div>    		
+</template>
+<div id="container">
+	<span id="unreadComments">Unread comments:</span><button id="markAsRead" disabled>Mark as read</button>
+	<div id="commentList">
+	</div>
+	<div id="configurationLink">
+		<a href="../pages/options.html" target="_blank">Go to configuration page</a>
+	</div>
+	<div id="message"></div>
+</div>

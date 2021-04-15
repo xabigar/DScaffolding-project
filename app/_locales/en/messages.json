@@ -1,0 +1,30 @@
+{
+  "appName": {
+    "message": "DScaffolding",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "DScaffolding",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "This extension enables Design Science Research through Mindmeister.",
+    "description": "The description of the application"
+  },
+  "browserActionTitle": {
+    "message": "DScaffolding",
+    "description": "The title of the browser action button"
+  },
+  "pageActionTitle": {
+    "message": "DScaffolding",
+    "description": "The title of the browser action button"
+  },
+  "locating": {
+    "message": "Locating",
+    "description": "Annotator:purpose mode label"
+  },
+  "annotating": {
+    "message": "Annotating",
+    "description": "Annotator:purpose mode label"
+  }
+}

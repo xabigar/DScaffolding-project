@@ -1,0 +1,29 @@
+/* @import '../../node_modules/bootstrap/dist/css/bootstrap.min'; */
+
+@import '../scripts/contentScript/operations/Popup/popup';
+
+@import './annotator/Purpose/purpose'; /* TODO This is related to annotator:purpose */
+
+
+#dscaffolding_link img{
+  width: 32px;
+}
+
+#dscaffolding_link {
+  width: -webkit-fill-available;
+}
+
+div[class^="AnnotationMenuStyle"] div[class*="ListAnnotationColours"]{
+  flex-direction: column;
+}
+div[class^="AnnotationMenuStyle"] div[class*="ListAnnotationColours"] div[class*="ListItem"]{
+  flex-direction: row;
+  margin-top: 5px;
+}
+div[class^="AnnotationMenuStyle"] div[class*="ListAnnotationColours"] div[class*="ListItem"] span{
+  margin-left: 5px;
+}
+
+#DScaffoldingFolderSelection{
+  margin-left: 10px;
+}

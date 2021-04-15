@@ -1,0 +1,103 @@
+<template id="testtemplate">
+
+  <style>
+    #selectedMendeleyColors ul{
+      list-style:none !important;
+      margin-left:0px !important;
+    }
+    #selectedMendeleyColors ul li{
+      float:left !important;
+      margin-left:2% !important;
+      margin-bottom:2% !important;
+    }
+    .selectedColor{
+      display:none;
+      padding-left:15px !important;
+      padding-right:5px !important;
+      padding-top:5px !important;
+      padding-bottom:5px !important;
+      /*border-radius:20px 20px 20px 20px !important;*/
+      border:1px solid #737373 !important;
+      position:relative;
+    }
+    .selectedColorTE{
+      display:none;
+      padding-left:15px !important;
+      padding-right:5px !important;
+      padding-top:5px !important;
+      padding-bottom:5px !important;
+      /*border-radius:20px 20px 20px 20px !important;*/
+      border:1px solid #737373 !important;
+      position:relative;
+    }
+    .colorLabel{
+      float:left !important;
+      margin-right:20px;
+    }
+    .removeButton{
+      opacity:0.5 !important;
+      margin-left:5px !important;
+      /*float:right !important;*/
+      top: 5px;
+      right:5px;
+      position:absolute;
+      width:15px !important;
+      height:15px !important;
+      border:1px solid #000000 !important;
+      border-radius:50% !important;
+      background-color:#e6e6e6 !important;
+      background-position:center center !important;
+      background-image:url('data:image/png;base64,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') !important;
+      background-size:5px 5px !important;
+      background-repeat:no-repeat !important;
+    }
+    .removeButton:hover{
+      opacity:1 !important;
+      cursor:pointer !important;
+    }
+  </style>
+
+  <div id="mendeleycolors" class="mh-20" kr="" style="display: none;">
+    <div id="selectedMendeleyColors">
+      <div style="font-weight:bold; font-size:120%;">Reading with a purpose</div><br/>
+      <div>Highlighting colors to be used in Mendeley for purposeful quotes.</div><br/>
+      <ul id="selectedMendeleyColorList">
+      </ul>
+    </div>
+    <div id="selectedMendeleyColorsTE" style="display: none;">
+      <ul id="selectedMendeleyColorListTE">
+      </ul>
+    </div>
+    <div style="clear:both"></div>
+    <a href="#" id="exportMendeleyColors">Obtain cheat sheet</a>
+    <div style="clear:both"></div>
+    <div class="color-palette" style="display:none;">
+      <div class="grid inlineblock" kr="">
+        <ul id="mendeleyColorSelector" kr="">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <template id="colorButtonTemplate">
+    <li kr="" style="width: 54px; height: 54px;">
+      <a class="mendeleyColorButton" href="#" kr="" style="margin-top: 3px; margin-left: 3px; width: 48px; height: 48px; border-radius: 100%; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 1px, rgba(23, 25, 26, 0.0980392) 0px 0px 0px 1px;"></a>
+    </li>
+  </template>
+
+  <template id="selectedColorTemplate">
+    <li class="selectedColor">
+      <div class="colorLabel"></div><div class="removeButton"></div>
+    </li>
+  </template>
+
+  <template id="selectedColorTemplateTE">
+    <li class="selectedColorTE">
+      <div class="colorLabel"></div>
+    </li>
+  </template>
+
+  <script id="paletteScript">
+  </script>
+
+</template>
